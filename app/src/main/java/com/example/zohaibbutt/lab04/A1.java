@@ -235,7 +235,7 @@ public class A1 extends AppCompatActivity {
         this.alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
 
         this.alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis() + 500,
-                1000 * refreshTime, this.pendingIntent);
+                1000 * 60 * refreshTime, this.pendingIntent);
 
     }
 
