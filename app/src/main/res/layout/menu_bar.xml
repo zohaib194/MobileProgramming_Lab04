@@ -1,0 +1,48 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:showIn="@layout/activity_a1">
+
+<android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/app_name" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="end">
+                <ImageButton android:id="@+id/Users"
+                    android:layout_width="61dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/users"
+                    android:scaleType="fitEnd"
+                    android:onClick="goToA2"
+                    android:contentDescription="@string/desc" />
+
+            <ImageButton android:id="@+id/Setting"
+                android:layout_width="61dp"
+                android:layout_height="wrap_content"
+                android:src="@drawable/settings"
+                android:scaleType="fitEnd"
+                android:onClick="goToSettings"
+                android:contentDescription="@string/setting" />
+
+        </LinearLayout>
+</android.support.v7.widget.Toolbar>
+</FrameLayout>

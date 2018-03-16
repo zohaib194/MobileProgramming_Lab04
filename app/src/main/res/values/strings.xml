@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">lab04</string>
+    <string name="setting">Settings</string>
+    <string name="desc">User Lists</string>
+    <string name="channel_id">lab04</string>
+    <string name="channel_name">messagesChannel</string>
+    <string name="channel_description">notification</string>
+</resources>
