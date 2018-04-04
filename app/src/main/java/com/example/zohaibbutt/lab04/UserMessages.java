@@ -82,16 +82,18 @@ public class UserMessages extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for(DataSnapshot ds : dataSnapshot.getChildren()){
-                    for(DataSnapshot dss : ds.getChildren()) {
-                        if (dss.getKey().equals("u")) {
-                            userList.add(dss.getValue().toString());
-                        }
-                        if (dss.getKey().equals("m")) {
-                            messageList.add(dss.getValue().toString());
-                        }
+                    if(ds.child("u").getValue().toString().equals(userName)) {
+                        for(DataSnapshot dss : ds.getChildren()) {
+                            if (dss.getKey().equals("u")) {
+                                userList.add(dss.getValue().toString());
+                            }
+                            if (dss.getKey().equals("m")) {
+                                messageList.add(dss.getValue().toString());
+                            }
 
-                        if(dss.getKey().equals("d")){
-                            dateList.add(dss.getValue().toString());
+                            if (dss.getKey().equals("d")) {
+                                dateList.add(dss.getValue().toString());
+                            }
                         }
                     }
                 }
